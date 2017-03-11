@@ -1,4 +1,5 @@
 require 'sinatra/base'
+Bundler.require :default
 Dir.glob('./app/{models,helpers}/*.rb').each do |file|
    require file
 end

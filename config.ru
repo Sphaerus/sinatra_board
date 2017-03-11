@@ -1,4 +1,3 @@
-Bundler.require :default
 require './core'
 
 map('/') { run ApplicationController }
