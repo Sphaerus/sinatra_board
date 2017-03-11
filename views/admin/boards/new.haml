@@ -1,0 +1,6 @@
+%h3= 'Add new board'
+
+%form{method: 'POST', action: "/admin/boards/new"}
+  %input{name: 'board_attributes[name]', placeholder: 'name'}
+  %input{name: 'board_attributes[description]', placeholder: 'description'}
+  %input{type: 'submit'}

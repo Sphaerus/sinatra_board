@@ -1,0 +1,14 @@
+%h3= 'Manage boards'
+= link_to 'New board', '/admin/boards/new'
+%table.table.table-striped
+  %th= 'name'
+  %th= 'description'
+  %th= 'options'
+  - @boards.each do |board|
+    %tr
+      %td= board.name
+      %td= board.description
+      %td
+        =link_to "Edit", "/admin/boards/#{board.id}/edit"
+        %form{action: "/admin/boards/#{board.id}/delete", method: 'POST'}
+          %input{type: 'submit', value: 'Delete'}

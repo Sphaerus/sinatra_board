@@ -1,0 +1,6 @@
+%h3= @board.name + " Edit"
+
+%form{method: 'POST', action: "/admin/boards/#{@board.id}"}
+  %input{name: 'board_attributes[name]', placeholder: 'name', value: @board.name}
+  %input{name: 'board_attributes[description]', placeholder: 'description', value: @board.description}
+  %input{type: 'submit'}

@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title= @title
+    %link{href: '/css/bootstrap.css', rel: 'stylesheet'}
+    %link{href: '/css/global.css', rel: 'stylesheet'}
+    %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'}
+    %script{src: '/js/bootstrap.min.js'}
+  %body
+    .container
+      %h4= 'Welcome to my blog'
+      - if current_user
+        = current_user.email
+        %form{action: '/users/sign_out', method: 'POST'}
+          %input{type: 'submit', value: 'Sign out'}
+      - else
+        %a{href: '/users/sign_up'}= 'Sign up'
+        %a{href: '/users/sign_in'}= 'Sign in'
+      = yield
