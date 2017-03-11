@@ -3,7 +3,7 @@ Bundler.require :default
 Dir.glob('./app/{models,helpers}/*.rb').each do |file|
    require file
 end
-Dir.glob('./app/{controllers}/*.rb').each do |file|
+Dir.glob('./app/{controllers}/*.rb').reverse.each do |file|
    require file
 end
 Dir.glob('./app/controllers/admin/*.rb') { |ac| require ac }
