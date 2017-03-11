@@ -1,4 +1,5 @@
-class ApplicationController < MyApp
+class ApplicationController < Sinatra::Base
+  enable :sessions, 'key'
   helpers ApplicationHelper
   # set folder for templates to ../views, but make the path absolute
   set :views, File.expand_path('../../views', __FILE__)

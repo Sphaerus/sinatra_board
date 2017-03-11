@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem "rake"
+
+#server
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 #db
 gem "sinatra-activerecord"
@@ -15,3 +17,6 @@ gem 'haml'
 
 #auth
 gem 'bcrypt'
+
+gem 'rspec'
+gem 'rack-test'

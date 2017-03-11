@@ -5,3 +5,7 @@ production:
 development:
   adapter: 'sqlite3'
   file: 'development.sqlite3'
+
+test:
+  adapter: 'sqlite3'
+  file: 'test.sqlite3'
