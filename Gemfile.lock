@@ -65,6 +65,7 @@ DEPENDENCIES
   haml
   passenger (>= 5.0.25)
   rack-test
+  rake
   rspec
   sinatra
   sinatra-activerecord
