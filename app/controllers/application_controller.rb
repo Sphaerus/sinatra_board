@@ -15,7 +15,6 @@ class ApplicationController < Sinatra::Base
 
   # will be used to display 404 error pages
   not_found do
-    set_title 'Not Found!'
     render_with_template :not_found
   end
 
@@ -27,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
   def title
-    'Welcome'
+    'Boards'
   end
 
   def authenticate_user
